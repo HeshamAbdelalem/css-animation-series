@@ -1,0 +1,21 @@
+.box-animation-container {
+  width: 200px;
+  height: 200px;
+  border: 10px solid grey;
+  background-color: #ddd;
+}
+
+.box {
+  display: inline-block;
+  background: tomato;
+  width: 200px;
+  height: 200px;
+  transition: transform 1000ms ease-in-out;
+  /* this property used to make sure if i stand on .box with the mouse it will not interact with it at all */
+  pointer-events: none;
+}
+
+.change-color {
+  background-color: darkmagenta;
+  transform: translate(200px, 150px) rotate(360deg);
+}
