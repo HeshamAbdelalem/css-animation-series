@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #ddd;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-menu {
+  list-style: none;
+}
+
+.main-menu > li {
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  background-color: #333;
+  width: 100%;
+  left: 0;
+  color: #eee;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+}
+
+.drop-menu li {
+  display: none;
+  padding: 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+.main-menu > li:hover {
+  background-color: #c9c9c9;
+}
+
+.main-menu > li:hover .drop-menu li {
+  display: block;
+}
+
+.main-menu > li:hover .drop-menu li:hover {
+  background-color: rgb(102, 0, 0);
+}
+
+/* *menu1 */
+
+.main-menu > li:hover .drop-menu.menu1 {
+  perspective: 1000px;
+}
+
+.main-menu > li:hover .drop-menu.menu1 li {
+  animation: menu1 500ms ease-in-out;
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    transform: rotateY('-90deg') translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY('0deg') translateY(0px);
+  }
+}
+
+/* *menu2   */
